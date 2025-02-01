@@ -106,6 +106,10 @@ PredY = predict(Xtest, w)
 MSEValue = np.mean((PredY - Ytest)**2)
 print(f"Mean Squared Error: {MSEValue}")
 
+#Using C-efficient of Determination (R2) method.
+R2Value = 1 - (np.sum((Ytest-PredY)**2)/np.sum((Ytest - np.mean(Ytest))**2))
+print(f"Coefficient of Determination (R2): {R2Value}")
+
 #Displaying the first five predictions against actual values.
 for i in range(min(5, len(PredY))):
     print(f"Predicted: {PredY[i]}; Actual: {Ytest[i]}")
