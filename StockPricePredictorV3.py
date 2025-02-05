@@ -91,6 +91,6 @@ def trainModel(df):
 
 #The driver code.
 if __name__ == "__main__":
-    file_path = input("Enter the stock data CSV file path: ")
-    df = DataPreparation(file_path)
-    model, feature_names = trainModel(df)
+    filePath = input("Enter the file path of the stock prices dataset (CSV): ")
+    df = DataPreparation(filePath)
+    model, featureNames = trainModel(df)
